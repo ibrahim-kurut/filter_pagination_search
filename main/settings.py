@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     # TAP
     'rest_framework',
 
+    # My App
+    'student_path',
+
 ]
 
 MIDDLEWARE = [
