@@ -1,4 +1,4 @@
-from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
+from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination, CursorPagination
 
 class Custom_Pagination_Student(PageNumberPagination):
     page_size = 50
@@ -21,3 +21,22 @@ class Custom_Limit_Offset_Path(LimitOffsetPagination):
      default_limit = 2
      limit_query_param = 'limit'
      offset_query_param = 'offset'
+
+class Custom_Cursor_Pagination(CursorPagination):
+    page_size = 20
+    cursor_query_param = "cursor"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
