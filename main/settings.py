@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # TAP
     'rest_framework',
+    'faker',
 
     # My App
     'student_path',
