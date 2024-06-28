@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     # TAP
     'rest_framework',
-    'faker',
+    'django_filters',
 
     # My App
     'student_path',
@@ -131,9 +131,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#? pagination in general for all endpoints
+
 
 REST_FRAMEWORK = {
+    #? pagination in general for all endpoints
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     # 'PAGE_SIZE': 20
 
@@ -142,4 +143,9 @@ REST_FRAMEWORK = {
 
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.CursorPagination',
     # 'PAGE_SIZE': 20
+
+
+
+    #? Filter pagination in general for all endpoints
+    # 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
