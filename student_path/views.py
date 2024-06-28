@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.filters import SearchFilter
 
 
 from django_filters.rest_framework import DjangoFilterBackend
@@ -25,8 +26,10 @@ class PathModelViewSet(ModelViewSet):
     # pagination_class = Custom_Limit_Offset_Path
 
 
-    filter_backends = [DjangoFilterBackend]
-    filterset_fields = ["path_name"]
+    # filter_backends = [DjangoFilterBackend]
+    # filterset_fields = ["path_name"]
+
+    search_fields = ["path_name"] # ------------------>> from global
 
 
 class StudentModelViewSet(ModelViewSet):
@@ -37,8 +40,9 @@ class StudentModelViewSet(ModelViewSet):
     # pagination_class = Custom_Cursor_Pagination
 
     # filterset_fields = ["f_name"]  ------------------>>  for global
-    filter_backends = [DjangoFilterBackend]
-    filterset_fields = ["f_name", "l_name", "path"]
+    filter_backends = [DjangoFilterBackend, SearchFilter]
+    # filterset_fields = ["f_name", "l_name", "path"]
+    search_fields = ["f_name"]
 
 
 

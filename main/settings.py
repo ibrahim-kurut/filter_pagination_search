@@ -148,4 +148,7 @@ REST_FRAMEWORK = {
 
     #? Filter pagination in general for all endpoints
     # 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+
+
+    'DEFAULT_FILTER_BACKENDS': ['rest_framework.filters.SearchFilter']
 }
